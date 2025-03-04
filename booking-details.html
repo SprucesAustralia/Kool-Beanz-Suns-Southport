@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Booking Details - Kool-Beanz-Suns-Southport</title>
+  <title>Booking Details - Kool Beanz Suns Southport QLD 4215</title>
   <style>
     * {
       margin: 0;
@@ -111,8 +111,8 @@
     }
 
     .specific-areas-list {
-      background: #e6f3f6; /* Light blue background like your screenshot */
-      border: 2px solid #01c6a0; /* Green border */
+      background: #e6f3f6;
+      border: 2px solid #01c6a0;
       border-radius: 10px;
       padding: 1rem;
       margin: 1rem 0;
@@ -150,8 +150,8 @@
       font-size: 1rem;
     }
 
-    /* Floor Plan List (Vertical Display) */
-    .floor-plan-section {
+    /* Areas to be Cleaned Section */
+    .areas-to-clean-section {
       margin: 1rem 0;
       padding: 1rem;
       background: #f5f9fa;
@@ -161,39 +161,29 @@
       animation: slideUp 0.7s ease forwards;
     }
 
-    .floor-plan-list {
-      list-style: none;
-      padding: 0;
-    }
-
-    .floor-plan-item {
-      position: relative;
+    .area-item {
+      margin-bottom: 1rem;
+      padding: 1rem;
       background: white;
       border: 2px solid #01c6a0;
       border-radius: 10px;
-      margin-bottom: 1rem;
-      padding: 1rem;
       box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-      cursor: grab;
       transition: transform 0.3s ease;
     }
 
-    .floor-plan-item:hover {
+    .area-item:hover {
       transform: scale(1.02);
     }
 
-    .pdf-viewer {
+    .area-image {
       width: 100%;
-      height: 600px; /* Keep the height as in your original design */
-      border: none; /* Remove any borders */
-      outline: none; /* Remove any outlines */
-      background: transparent; /* Ensure no background interferes */
-      overflow: hidden; /* Hide any overflow from the PDF viewer */
-      -webkit-overflow-scrolling: touch; /* Enable smooth scrolling on mobile */
-      touch-action: pan-x pan-y pinch-zoom; /* Enable pinch-to-zoom and panning on mobile */
+      max-width: 600px;
+      height: auto;
+      border-radius: 8px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     }
 
-    /* Ensure touch-friendly behavior on mobile */
+    /* Responsive Design */
     @media (max-width: 768px) {
       .booking-card {
         padding: 0.8rem;
@@ -222,15 +212,15 @@
         font-size: 0.9rem;
         margin-bottom: 0.4rem;
       }
-      .floor-plan-section {
+      .areas-to-clean-section {
         padding: 0.8rem;
       }
-      .floor-plan-item {
+      .area-item {
         margin-bottom: 0.8rem;
         padding: 0.8rem;
       }
-      .pdf-viewer {
-        height: 400px; /* Adjust height for mobile */
+      .area-image {
+        max-width: 100%;
       }
     }
 
@@ -274,16 +264,16 @@
       .specific-areas-list li::before {
         font-size: 0.8rem;
       }
-      .floor-plan-section {
+      .areas-to-clean-section {
         padding: 0.5rem;
       }
-      .floor-plan-item {
+      .area-item {
         margin-bottom: 0.5rem;
         padding: 0.5rem;
         border-radius: 8px;
       }
-      .pdf-viewer {
-        height: 300px; /* Adjust height for smaller screens */
+      .area-image {
+        max-width: 100%;
       }
     }
 
@@ -301,7 +291,7 @@
 </head>
 <body>
   <header>
-    514 Boundary Road, Richlands - Post Construction Cleaning - Office Refurbishment
+    Kool Beanz Suns Southport QLD 4215
   </header>
   <div class="container">
     <a href="index.html" class="back-btn">Back to Home</a>
@@ -314,9 +304,7 @@
 
       <div class="booking-item">
         <div class="field-title">Property Size</div>
-        <div class="field-details">
-          <div class="field-details"> to be assigned </div>
-        </div>
+        <div class="field-details">to be assigned</div>
       </div>
 
       <div class="booking-item">
@@ -336,20 +324,19 @@
 
       <div class="booking-item">
         <div class="field-title">Cleaning Frequency</div>
-        <div class="field-details"> 
+        <div class="field-details">
           <strong>Days</strong><br>
-          Tuesdays and Thursdays²<br>
+          Tuesdays and Thursdays<br>
           <strong>Hours</strong><br>
           6 hours per day<br>
           <strong>Dates</strong><br>
-          March 13, 18, 20, 25, 27, 2025<br>
-          </div>
+          March 13, 18, 20, 25, 27, 2025
+        </div>
+      </div>
 
       <div class="booking-item">
         <div class="field-title">Cleaning Dates</div>
-        <div class="field-details">
-          Dates:March 13, 18, 20, 25, 27, 2025<br>
-        </div>
+        <div class="field-details">Dates: March 13, 18, 20, 25, 27, 2025</div>
       </div>
 
       <div class="booking-item">
@@ -359,7 +346,7 @@
 
       <div class="booking-item">
         <div class="field-title">Number of Cleaners</div>
-        <div class="field-details"> To be assigned</div>
+        <div class="field-details">To be assigned</div>
       </div>
 
       <div class="booking-item">
@@ -371,9 +358,14 @@
         <div class="field-title">Pay to Cleaner</div>
         <div class="field-details">to be assigned</div>
       </div>
+
+      <div class="booking-item">
+        <div class="field-title">Area Not to be Cleaned</div>
+        <div class="field-details">Kitchen</div>
+      </div>
     </div>
 
-    <!-- Specific Areas List (Above Floor Plans) - Updated with New List and Adjusted Title Spacing -->
+    <!-- Specific Areas List -->
     <div class="specific-areas-list" id="specificAreasList">
       <h3>Specific Areas to Clean</h3>
       <ul>
@@ -388,26 +380,35 @@
       </ul>
     </div>
 
-    <!-- Floor Plan List (Vertical Display, Automatic Load) -->
-    <div class="floor-plan-section">
-      <ul class="floor-plan-list">
-        <li class="floor-plan-item loading" data-src="building_a_ground.pdf">
-          <div class="pdf-header">Building A Ground Floor (PDF)</div>
-          <embed src="" class="pdf-viewer" id="pdfViewerA1" type="application/pdf">
-        </li>
-        <li class="floor-plan-item loading" data-src="building_a_level1.pdf">
-          <div class="pdf-header">Building A Level 1 (PDF)</div>
-          <embed src="" class="pdf-viewer" id="pdfViewerA2" type="application/pdf">
-        </li>
-        <li class="floor-plan-item loading" data-src="building_b_ground.pdf">
-          <div class="pdf-header">Building B Ground Floor (PDF)</div>
-          <embed src="" class="pdf-viewer" id="pdfViewerB1" type="application/pdf">
-        </li>
-        <li class="floor-plan-item loading" data-src="building_b_level1.pdf">
-          <div class="pdf-header">Building B Level 1 (PDF)</div>
-          <embed src="" class="pdf-viewer" id="pdfViewerB2" type="application/pdf">
-        </li>
-      </ul>
+    <!-- Areas to be Cleaned Section with Images -->
+    <div class="areas-to-clean-section">
+      <div class="area-item">
+        <img src="area-to-be-cleaned-1.jpg" alt="Area to be Cleaned" class="area-image">
+      </div>
+      <div class="area-item">
+        <img src="area-to-be-cleaned-2.jpg" alt="Area to be Cleaned" class="area-image">
+      </div>
+      <div class="area-item">
+        <img src="area-to-be-cleaned-3.jpg" alt="Area to be Cleaned" class="area-image">
+      </div>
+      <div class="area-item">
+        <img src="area-to-be-cleaned-4.jpg" alt="Area to be Cleaned" class="area-image">
+      </div>
+      <div class="area-item">
+        <img src="area-to-be-cleaned-5.jpg" alt="Area to be Cleaned" class="area-image">
+      </div>
+      <div class="area-item">
+        <img src="area-to-be-cleaned-6.jpg" alt="Area to be Cleaned" class="area-image">
+      </div>
+      <div class="area-item">
+        <img src="area-to-be-cleaned-7.jpg" alt="Area to be Cleaned" class="area-image">
+      </div>
+      <div class="area-item">
+        <img src="area-to-be-cleaned-8.jpg" alt="Area to be Cleaned" class="area-image">
+      </div>
+      <div class="area-item">
+        <img src="area-to-be-cleaned-9.jpg" alt="Area to be Cleaned" class="area-image">
+      </div>
     </div>
   </div>
 
@@ -421,41 +422,12 @@
         const currentScroll = window.pageYOffset;
 
         if (currentScroll > lastScroll && currentScroll > 50) {
-          // Scrolling down
           header.classList.add('hidden');
         } else {
-          // Scrolling up
           header.classList.remove('hidden');
         }
         lastScroll = currentScroll;
       });
-
-      // Floor Plan List (Automatic Load on Page Load)
-      const floorPlanItems = document.querySelectorAll('.floor-plan-item');
-      
-      // Load PDFs automatically on page load, assuming PDFs are in the root directory
-      const loadPdfs = () => {
-        floorPlanItems.forEach(item => {
-          const src = item.getAttribute('data-src');
-          if (src) {
-            const viewer = item.querySelector('.pdf-viewer');
-            viewer.src = src; // Load PDF directly from the root directory
-            item.classList.remove('loading'); // Remove loading state
-            viewer.onload = () => {
-              item.classList.add('loaded'); // Optional: Add loaded class for custom styling
-              console.log(`PDF loaded: ${src}`);
-            };
-            viewer.onerror = () => {
-              viewer.src = 'https://via.placeholder.com/600x800?text=PDF+Not+Found'; // Fallback with larger dimensions
-              item.classList.remove('loading');
-              console.error(`Failed to load PDF: ${src}`);
-            };
-          }
-        });
-      };
-
-      // Load PDFs immediately when the page loads
-      loadPdfs();
 
       // Add hover effect for booking items
       const items = document.querySelectorAll('.booking-item');
